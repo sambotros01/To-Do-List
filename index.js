@@ -23,6 +23,7 @@ restore_button.addEventListener('click', function() {
       // change class
       element.parentElement.classList.remove("Completed");
       element.parentElement.classList.add("TD");
+      element.checked = false;
     }
   };
 });
@@ -54,6 +55,7 @@ checkboxes.forEach((checkbox) => {
         // change class
         checkbox.parentElement.classList.remove("TD");
         checkbox.parentElement.classList.add("Completed");
+        checkbox.checked = false;
       }
     }
   })
@@ -63,7 +65,6 @@ checkboxes.forEach((checkbox) => {
 
 // get the text input element
 let userTextInput = document.querySelector('.Submit_Task');
-
 // add the event listener for user pressing the enter key
 userTextInput.addEventListener('keypress', function(event) {
   // get the user input string
@@ -104,3 +105,36 @@ userTextInput.addEventListener('keypress', function(event) {
     userTextInput.value = '';
   }
 });
+
+
+
+
+
+
+//// loading the data
+// let id_list_from_todolist = document.querySelector("grab all the ids from todolist")
+// if (localStorage data exists) {
+//   for (const key in id_list_from_todolist) {
+//      let value = localStorage.getItem(key);
+//      let new_li = document.createElement('li');
+//      new_li.id = key;
+//      new_li.classList.add('TD');
+//      new_li.textContent = value;
+//      todoList.appendChild(new_li);
+//   }
+//
+//}
+//   load the key, value pairs
+// } else {
+//   load the default page
+// }
+
+
+//// saving the data
+// for (const key in id_list_from_todolist) {
+//   let save_string = document.querySelector(key).textContent;
+//   localStorage.setItem(key, save_string);
+
+// }
+
+
