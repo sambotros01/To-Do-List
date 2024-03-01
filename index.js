@@ -61,8 +61,6 @@ checkboxes.forEach((checkbox) => {
   })
 });
 
-
-
 // get the text input element
 let userTextInput = document.querySelector('.Submit_Task');
 // add the event listener for user pressing the enter key
@@ -90,13 +88,9 @@ userTextInput.addEventListener('keypress', function(event) {
         taskItem.remove();
         // add the <li> to the completed list
         completedList.appendChild(taskItem);
-        //// does the old event listener need to be removed?
-        //// need to add a new event listener to listen for when the checkbox is unchecked from the Completed List
-        //// if the checkbox is unchecked
-        //// remove the strikethrough
-        //// remove from Completed List
-        //// add to the to-do list
-        //// add an event listener to wait for user to check the checkbox
+        // change class
+        checkbox.parentElement.classList.remove("TD");
+        checkbox.parentElement.classList.add("Completed");
       }
     });
     // append the new li as the last item in the to-do list
